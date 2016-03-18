@@ -8,8 +8,8 @@
     <ProjectGuid>{1D7CB3DD-4C45-4A97-B8B7-16A22394D90F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LinqEx</RootNamespace>
-    <AssemblyName>LinqEx</AssemblyName>
+    <RootNamespace>LinqX</RootNamespace>
+    <AssemblyName>LinqX</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
-    <id>LinqEx</id>
+    <id>LinqX</id>
     <version>0.0-aardvark</version>
     <authors>Licshee</authors>
-    <projectUrl>https://github.com/OmniKits/LinqEx</projectUrl>
+    <projectUrl>https://github.com/OmniKits/LinqX</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>-</description>
   </metadata>
   <files>
-    <file src="Release\LinqEx.dll" target="lib\LinqEx.dll" />
+    <file src="Release\LinqX.dll" target="lib\LinqX.dll" />
   </files>
 </package>
