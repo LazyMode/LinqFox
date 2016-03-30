@@ -17,9 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.Net35", "LinqFox.Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.SL", "LinqFox.SL\LinqFox.SL.csproj", "{6D563970-39E7-4A72-9F15-64B6A5CC5B12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.WP", "LinqFox.WP\LinqFox.WP.csproj", "{860C32C4-856B-4F44-A26C-AB57930D0D94}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		LinqFox\LinqFox.projitems*{33902579-40b5-4fa7-b16c-d5230fb83ac8}*SharedItemsImports = 4
+		LinqFox\LinqFox.projitems*{860c32c4-856b-4f44-a26c-ab57930d0d94}*SharedItemsImports = 4
 		LinqFox\LinqFox.projitems*{791863ce-8976-482c-b37a-108afa65130f}*SharedItemsImports = 13
 		LinqFox\LinqFox.projitems*{c35330d2-777a-4b69-9ae4-575680d9a54f}*SharedItemsImports = 4
 		LinqFox\LinqFox.projitems*{95ea5d44-f983-4066-9d3b-7b46abb90a2e}*SharedItemsImports = 4
@@ -133,6 +136,22 @@ Global
 		{6D563970-39E7-4A72-9F15-64B6A5CC5B12}.Release|x64.Build.0 = Release|Any CPU
 		{6D563970-39E7-4A72-9F15-64B6A5CC5B12}.Release|x86.ActiveCfg = Release|Any CPU
 		{6D563970-39E7-4A72-9F15-64B6A5CC5B12}.Release|x86.Build.0 = Release|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Debug|ARM.ActiveCfg = Debug|ARM
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Debug|ARM.Build.0 = Debug|ARM
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Debug|x64.Build.0 = Debug|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Debug|x86.ActiveCfg = Debug|x86
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Debug|x86.Build.0 = Debug|x86
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Release|ARM.ActiveCfg = Release|ARM
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Release|ARM.Build.0 = Release|ARM
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Release|x64.ActiveCfg = Release|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Release|x64.Build.0 = Release|Any CPU
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Release|x86.ActiveCfg = Release|x86
+		{860C32C4-856B-4F44-A26C-AB57930D0D94}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

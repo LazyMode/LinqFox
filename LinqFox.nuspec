@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>LinqFox</id>
-    <version>0.0-abrocoma</version>
+    <version>0.0-abrocome</version>
     <authors>Licshee</authors>
     <projectUrl>https://github.com/OmniKits/LinqFox</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -15,5 +15,6 @@
     <file src="Release\Portable\LinqFox.dll" target="lib\portable-net4+sl5+uap+win8+wp8+wpa+dnxcore\LinqFox.dll" />
     <file src="Release\SL\LinqFox.dll" target="lib\sl5\LinqFox.dll" />
     <file src="Release\UWP\LinqFox.dll" target="lib\uap\LinqFox.dll" />
+    <file src="Release\WP\LinqFox.dll" target="lib\wp8\LinqFox.dll" />
   </files>
 </package>
