@@ -2,18 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>LinqFox</id>
-    <version>0.0-abramis</version>
+    <version>0.0-abrocoma</version>
     <authors>Licshee</authors>
-    <projectUrl>https://github.com/OmniKits/LinqEx</projectUrl>
+    <projectUrl>https://github.com/OmniKits/LinqFox</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>-</description>
   </metadata>
   <files>
-    <file src="Release\Net20\Linq.dll" target="lib\net20\Linq.dll" />
-    <file src="Release\Net35\Linq.dll" target="lib\net35\Linq.dll" />
-    <file src="Release\Net40\Linq.dll" target="lib\net40\Linq.dll" />
-    <file src="Release\Portable\Linq.dll" target="lib\portable-net4+sl5+uap+win8+wp8+wpa+dnxcore\Linq.dll" />
-    <file src="Release\SL\Linq.dll" target="lib\sl5\Linq.dll" />
-    <file src="Release\UWP\Linq.dll" target="lib\uap\Linq.dll" />
+    <file src="Release\Net20\LinqFox.dll" target="lib\net20\LinqFox.dll" />
+    <file src="Release\Net35\LinqFox.dll" target="lib\net35\LinqFox.dll" />
+    <file src="Release\Net40\LinqFox.dll" target="lib\net40\LinqFox.dll" />
+    <file src="Release\Portable\LinqFox.dll" target="lib\portable-net4+sl5+uap+win8+wp8+wpa+dnxcore\LinqFox.dll" />
+    <file src="Release\SL\LinqFox.dll" target="lib\sl5\LinqFox.dll" />
+    <file src="Release\UWP\LinqFox.dll" target="lib\uap\LinqFox.dll" />
   </files>
 </package>
