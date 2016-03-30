@@ -3,28 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqEx.Portable", "LinqEx.Portable\LinqEx.Portable.csproj", "{1D7CB3DD-4C45-4A97-B8B7-16A22394D90F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.Portable", "LinqFox.Portable\LinqFox.Portable.csproj", "{1D7CB3DD-4C45-4A97-B8B7-16A22394D90F}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LinqEx", "LinqEx\LinqEx.shproj", "{791863CE-8976-482C-B37A-108AFA65130F}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LinqFox", "LinqFox\LinqFox.shproj", "{791863CE-8976-482C-B37A-108AFA65130F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqEx.Net40", "LinqEx.Net40\LinqEx.Net40.csproj", "{33902579-40B5-4FA7-B16C-D5230FB83AC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.Net40", "LinqFox.Net40\LinqFox.Net40.csproj", "{33902579-40B5-4FA7-B16C-D5230FB83AC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqEx.UWP", "LinqEx.UWP\LinqEx.UWP.csproj", "{C35330D2-777A-4B69-9AE4-575680D9A54F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.UWP", "LinqFox.UWP\LinqFox.UWP.csproj", "{C35330D2-777A-4B69-9AE4-575680D9A54F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqEx.Net20", "LinqEx.Net20\LinqEx.Net20.csproj", "{87D806FB-55AC-46A0-87CC-9784C279C09D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.Net20", "LinqFox.Net20\LinqFox.Net20.csproj", "{87D806FB-55AC-46A0-87CC-9784C279C09D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqEx.Net35", "LinqEx.Net35\LinqEx.Net35.csproj", "{95EA5D44-F983-4066-9D3B-7B46ABB90A2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.Net35", "LinqFox.Net35\LinqFox.Net35.csproj", "{95EA5D44-F983-4066-9D3B-7B46ABB90A2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqEx.SL", "LinqEx.SL\LinqEx.SL.csproj", "{6D563970-39E7-4A72-9F15-64B6A5CC5B12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqFox.SL", "LinqFox.SL\LinqFox.SL.csproj", "{6D563970-39E7-4A72-9F15-64B6A5CC5B12}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		LinqEx\LinqEx.projitems*{33902579-40b5-4fa7-b16c-d5230fb83ac8}*SharedItemsImports = 4
-		LinqEx\LinqEx.projitems*{791863ce-8976-482c-b37a-108afa65130f}*SharedItemsImports = 13
-		LinqEx\LinqEx.projitems*{c35330d2-777a-4b69-9ae4-575680d9a54f}*SharedItemsImports = 4
-		LinqEx\LinqEx.projitems*{95ea5d44-f983-4066-9d3b-7b46abb90a2e}*SharedItemsImports = 4
-		LinqEx\LinqEx.projitems*{87d806fb-55ac-46a0-87cc-9784c279c09d}*SharedItemsImports = 4
-		LinqEx\LinqEx.projitems*{1d7cb3dd-4c45-4a97-b8b7-16a22394d90f}*SharedItemsImports = 4
+		LinqFox\LinqFox.projitems*{33902579-40b5-4fa7-b16c-d5230fb83ac8}*SharedItemsImports = 4
+		LinqFox\LinqFox.projitems*{791863ce-8976-482c-b37a-108afa65130f}*SharedItemsImports = 13
+		LinqFox\LinqFox.projitems*{c35330d2-777a-4b69-9ae4-575680d9a54f}*SharedItemsImports = 4
+		LinqFox\LinqFox.projitems*{95ea5d44-f983-4066-9d3b-7b46abb90a2e}*SharedItemsImports = 4
+		LinqFox\LinqFox.projitems*{87d806fb-55ac-46a0-87cc-9784c279c09d}*SharedItemsImports = 4
+		LinqFox\LinqFox.projitems*{1d7cb3dd-4c45-4a97-b8b7-16a22394d90f}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

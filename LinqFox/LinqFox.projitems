@@ -6,7 +6,7 @@
     <SharedGUID>791863ce-8976-482c-b37a-108afa65130f</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>LinqEx</Import_RootNamespace>
+    <Import_RootNamespace>LinqFox</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" />

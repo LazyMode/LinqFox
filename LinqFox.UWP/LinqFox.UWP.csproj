@@ -7,8 +7,8 @@
     <ProjectGuid>{C35330D2-777A-4B69-9AE4-575680D9A54F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Linq</RootNamespace>
-    <AssemblyName>Linq</AssemblyName>
+    <RootNamespace>LinqFox</RootNamespace>
+    <AssemblyName>LinqFox</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
@@ -107,7 +107,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\LinqEx.UWP.rd.xml">
+    <EmbeddedResource Include="Properties\LinqFox.UWP.rd.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -116,7 +116,7 @@
     <Compile Include="DictExRefTricks.cs" />
     <Compile Include="NullEx.cs" />
   </ItemGroup>
-  <Import Project="..\LinqEx\LinqEx.projitems" Label="Shared" />
+  <Import Project="..\LinqFox\LinqFox.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

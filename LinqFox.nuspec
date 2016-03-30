@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
-    <id>Linq</id>
+    <id>LinqFox</id>
     <version>0.0-abramis</version>
     <authors>Licshee</authors>
     <projectUrl>https://github.com/OmniKits/LinqEx</projectUrl>

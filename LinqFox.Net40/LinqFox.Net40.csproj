@@ -7,8 +7,8 @@
     <ProjectGuid>{33902579-40B5-4FA7-B16C-D5230FB83AC8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Linq</RootNamespace>
-    <AssemblyName>Linq</AssemblyName>
+    <RootNamespace>LinqFox</RootNamespace>
+    <AssemblyName>LinqFox</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -47,7 +47,7 @@
     <Compile Include="DictExRefTricks.cs" />
     <Compile Include="NullEx.cs" />
   </ItemGroup>
-  <Import Project="..\LinqEx\LinqEx.projitems" Label="Shared" />
+  <Import Project="..\LinqFox\LinqFox.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

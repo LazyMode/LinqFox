@@ -4,28 +4,29 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{87D806FB-55AC-46A0-87CC-9784C279C09D}</ProjectGuid>
+    <ProjectGuid>{95EA5D44-F983-4066-9D3B-7B46ABB90A2E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Linq</RootNamespace>
-    <AssemblyName>Linq</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <RootNamespace>LinqFox</RootNamespace>
+    <AssemblyName>LinqFox</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NET;NET20</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NET;NET35</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Release\Net20\</OutputPath>
-    <DefineConstants>TRACE;NET;NET20</DefineConstants>
+    <OutputPath>..\Release\Net35\</OutputPath>
+    <DefineConstants>TRACE;NET;NET35</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -40,11 +41,9 @@
   <ItemGroup>
     <Compile Include="DictEx.cs" />
     <Compile Include="DictExRefTricks.cs" />
-    <Compile Include="ExtensionAttribute.cs" />
-    <Compile Include="Func.cs" />
     <Compile Include="NullEx.cs" />
   </ItemGroup>
-  <Import Project="..\LinqEx\LinqEx.projitems" Label="Shared" />
+  <Import Project="..\LinqFox\LinqFox.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
