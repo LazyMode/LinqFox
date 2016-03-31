@@ -1,8 +1,11 @@
-﻿#if NETFX_CORE || WINDOWS_UWP || UWP || UAP || dNFx || NetFramework || NET || Silverlight || SILVERLIGHT || SL
+﻿#if NETFX_CORE || WINDOWS_UWP || UWP || UAP || NET || NETFX || SILVERLIGHT || SL
 
 using System;
 
-static partial class NullEx
+#if PUBLIC
+public
+#endif
+static class NullEx
 {
     public static object ToDBValue<T>(this T value)
     {
@@ -25,7 +28,7 @@ static partial class NullEx
         return (T)value;
     }
 
-    public static T ToCLValue<T>(this object value, Func<T> factory)
+    public static T ToCLValue<T>(this object value, Factory<T> factory)
     {
         if (value == null)
             return factory();

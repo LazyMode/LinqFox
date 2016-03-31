@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-static partial class DictEx
+#if PUBLIC
+public
+#endif
+static class DictEx
 {
     public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key)
     {
@@ -21,7 +24,7 @@ static partial class DictEx
     }
 
     public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> source,
-        TKey key, Func<TKey, TValue> factory)
+        TKey key, Factory<TKey, TValue> factory)
     {
         TValue value;
         if (source.TryGetValue(key, out value))
@@ -30,7 +33,7 @@ static partial class DictEx
         return factory(key);
     }
     public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> source,
-        TKey key, Func<TValue> factory)
+        TKey key, Factory<TValue> factory)
     {
         TValue value;
         if (source.TryGetValue(key, out value))
@@ -75,7 +78,7 @@ static partial class DictEx
     => dicts.GetFirstOrDefault(key);
 
     public static TValue GetFirstOrDefault<TKey, TValue>(this IEnumerable<IDictionary<TKey, TValue>> dicts,
-        TKey key, Func<TKey, TValue> factory)
+        TKey key, Factory<TKey, TValue> factory)
     {
         TValue value;
         foreach (var dict in dicts)
@@ -86,12 +89,12 @@ static partial class DictEx
 
         return factory(key);
     }
-    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Func<TKey, TValue> factory,
+    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Factory<TKey, TValue> factory,
         params IDictionary<TKey, TValue>[] dicts)
     => dicts.GetFirstOrDefault(key, factory);
 
     public static TValue GetFirstOrDefault<TKey, TValue>(this IEnumerable<IDictionary<TKey, TValue>> dicts,
-        TKey key, Func<TValue> factory)
+        TKey key, Factory<TValue> factory)
     {
         TValue value;
         foreach (var dict in dicts)
@@ -102,7 +105,7 @@ static partial class DictEx
 
         return factory();
     }
-    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Func<TValue> factory,
+    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Factory<TValue> factory,
         params IDictionary<TKey, TValue>[] dicts)
     => dicts.GetFirstOrDefault(key, factory);
 }

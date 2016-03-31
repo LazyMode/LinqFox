@@ -29,7 +29,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;PUBLIC</DefineConstants>
     <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
@@ -39,7 +39,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\Release\SL\</OutputPath>
-    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <DefineConstants>TRACE;SILVERLIGHT;PUBLIC</DefineConstants>
     <NoStdLib>true</NoStdLib>
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
@@ -66,12 +66,12 @@
     <Compile Include="..\LinqFox\DictExRefTricks.cs">
       <Link>DictExRefTricks.cs</Link>
     </Compile>
+    <Compile Include="..\LinqFox\Factory.cs">
+      <Link>Factory.cs</Link>
+    </Compile>
     <Compile Include="..\LinqFox\NullEx.cs">
       <Link>NullEx.cs</Link>
     </Compile>
-    <Compile Include="Public\DictEx.cs" />
-    <Compile Include="Public\DictExRefTricks.cs" />
-    <Compile Include="Public\NullEx.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>

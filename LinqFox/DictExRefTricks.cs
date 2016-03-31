@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-static partial class DictExRefTricks
+#if PUBLIC
+public
+#endif
+static class DictExRefTricks
 {
     public static bool TryGetFirst<TKey, TValue>(this IEnumerable<IDictionary<TKey, TValue>> dicts,
         TKey key, ref TValue value)

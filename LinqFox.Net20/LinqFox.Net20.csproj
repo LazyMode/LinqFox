@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NET;NET20</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NETFX;NET20;PUBLIC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -25,7 +25,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\Release\Net20\</OutputPath>
-    <DefineConstants>TRACE;NET;NET20</DefineConstants>
+    <DefineConstants>TRACE;NETFX;NET20;PUBLIC</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -38,11 +38,7 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DictEx.cs" />
-    <Compile Include="DictExRefTricks.cs" />
     <Compile Include="ExtensionAttribute.cs" />
-    <Compile Include="Func.cs" />
-    <Compile Include="NullEx.cs" />
   </ItemGroup>
   <Import Project="..\LinqFox\LinqFox.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
