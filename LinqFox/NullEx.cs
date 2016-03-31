@@ -2,7 +2,7 @@
 
 using System;
 
-#if PUBLIC
+#if EXPOSE_EVERYTHING || EXPOSE_LINQFOX
 public
 #endif
 static class NullEx

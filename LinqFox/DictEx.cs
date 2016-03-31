@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-#if PUBLIC
+#if EXPOSE_EVERYTHING || EXPOSE_LINQFOX
 public
 #endif
 static class DictEx
