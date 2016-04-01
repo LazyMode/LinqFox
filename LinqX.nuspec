@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>LinqX</id>
+    <version>0.0-abrocome</version>
+    <authors>OmniKits</authors>
+    <projectUrl>https://github.com/OmniKits/LinqFox</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
+    <description>-</description>
+    <dependencies>
+      <dependency id="LinqFox" version="[0.0-abrocome]" />
+    </dependencies>
+  </metadata>
+  <files />
+</package>
