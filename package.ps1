@@ -77,11 +77,11 @@ use-var($xw = [System.Xml.XmlWriter]::Create($nuspec, $xs)){
 
 'Updating Acomplished.'
 
-&nuget pack "$nuspec" -Verbosity detailed -OutputDirectory "nupkg"
+&nuget pack "$nuspec" -Verbosity detailed
 
 if(Test-Path Env:LocalNupkg){
   if(-not (Test-Path $Env:LocalNupkg)){
     md $Env:LocalNupkg
   }
-  copy ("nupkg\" + $nupkg) $Env:LocalNupkg
+  copy $nupkg $Env:LocalNupkg
 }
