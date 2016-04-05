@@ -12,7 +12,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DictEx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DictExRefTricks.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Factory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumerableEx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Selector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NullEx.cs" />
   </ItemGroup>
 </Project>

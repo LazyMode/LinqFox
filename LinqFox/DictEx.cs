@@ -24,7 +24,7 @@ static class DictEx
     }
 
     public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> source,
-        TKey key, Factory<TKey, TValue> factory)
+        TKey key, Selector<TKey, TValue> factory)
     {
         TValue value;
         if (source.TryGetValue(key, out value))
@@ -33,7 +33,7 @@ static class DictEx
         return factory(key);
     }
     public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> source,
-        TKey key, Factory<TValue> factory)
+        TKey key, Selector<TValue> factory)
     {
         TValue value;
         if (source.TryGetValue(key, out value))
@@ -78,7 +78,7 @@ static class DictEx
     => dicts.GetFirstOrDefault(key);
 
     public static TValue GetFirstOrDefault<TKey, TValue>(this IEnumerable<IDictionary<TKey, TValue>> dicts,
-        TKey key, Factory<TKey, TValue> factory)
+        TKey key, Selector<TKey, TValue> factory)
     {
         TValue value;
         foreach (var dict in dicts)
@@ -89,12 +89,12 @@ static class DictEx
 
         return factory(key);
     }
-    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Factory<TKey, TValue> factory,
+    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Selector<TKey, TValue> factory,
         params IDictionary<TKey, TValue>[] dicts)
     => dicts.GetFirstOrDefault(key, factory);
 
     public static TValue GetFirstOrDefault<TKey, TValue>(this IEnumerable<IDictionary<TKey, TValue>> dicts,
-        TKey key, Factory<TValue> factory)
+        TKey key, Selector<TValue> factory)
     {
         TValue value;
         foreach (var dict in dicts)
@@ -105,7 +105,7 @@ static class DictEx
 
         return factory();
     }
-    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Factory<TValue> factory,
+    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Selector<TValue> factory,
         params IDictionary<TKey, TValue>[] dicts)
     => dicts.GetFirstOrDefault(key, factory);
 }

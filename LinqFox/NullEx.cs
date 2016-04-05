@@ -28,7 +28,7 @@ static class NullEx
         return (T)value;
     }
 
-    public static T ToCLValue<T>(this object value, Factory<T> factory)
+    public static T ToCLValue<T>(this object value, Selector<T> factory)
     {
         if (value == null)
             return factory();
