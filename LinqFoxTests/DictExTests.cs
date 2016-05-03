@@ -37,6 +37,8 @@ public class DictExTests
         Assert.True(dict3.IsSupersetOf(dict2));
         Assert.True(dict3.IsSubsetOf(dict1));
         Assert.False(dict3.IsSubsetOf(dict2));
+        Assert.True(dict3.IsProperSupersetOf(dict2));
+        Assert.False(dict3.IsProperSupersetOf(dict1));
 
         var dict4 = new Dict
         {
@@ -52,5 +54,6 @@ public class DictExTests
         };
         Assert.True(dict5.IsSupersetOf(dict2));
         Assert.False(dict5.IsSupersetOf(dict3));
+        Assert.True(dict5.IsProperSupersetOf(dict2));
     }
 }

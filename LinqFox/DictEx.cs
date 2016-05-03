@@ -25,8 +25,11 @@ static class DictEx
         }
     }
 
-    public static bool IsSubsetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test)
+    public static bool IsSubsetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test = null)
     {
+        if (test == null)
+            test = InternalTester<TKey>.Test;
+
         TValue tmp;
         foreach (var key in dict1.Keys)
         {
@@ -37,16 +40,14 @@ static class DictEx
         }
         return true;
     }
-    public static bool IsSubsetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
-        => dict1.IsSubsetOf(dict2, InternalTester<TKey>.Test);
-    public static bool IsSupersetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test)
+    public static bool IsProperSubsetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test = null)
+        => dict1.IsSubsetOf(dict2, test) && !dict1.IsSupersetOf(dict2, test);
+    public static bool IsSupersetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test = null)
         => dict2.IsSubsetOf(dict1, test);
-    public static bool IsSupersetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
-        => dict1.IsSupersetOf(dict2, InternalTester<TKey>.Test);
-    public static bool IsEquivalentOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test)
+    public static bool IsProperSupersetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test = null)
+        => dict1.IsSupersetOf(dict2, test) && !dict1.IsSubsetOf(dict2, test);
+    public static bool IsEquivalentOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test = null)
         => dict1.IsSubsetOf(dict2, test) && dict1.IsSupersetOf(dict2, test);
-    public static bool IsEquivalentOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
-        => dict1.IsEquivalentOf(dict2, InternalTester<TKey>.Test);
 
     #endregion
 
