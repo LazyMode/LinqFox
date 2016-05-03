@@ -6,6 +6,52 @@ public
 #endif
 static class DictEx
 {
+    #region comparing
+
+    class InternalTester<TKey>
+    {
+        public static bool Test<TValue>(TValue x, TValue y)
+        {
+            var comparer = EqualityComparer<TValue>.Default;
+            if (comparer.Equals(x, y))
+                return true;
+
+            var dx = x as IDictionary<TKey, TValue>;
+            if (dx == null) return false;
+            var dy = y as IDictionary<TKey, TValue>;
+            if (dy == null) return false;
+
+            return dx.IsEquivalentOf(dy, Test);
+        }
+    }
+
+    public static bool IsSubsetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test)
+    {
+        TValue tmp;
+        foreach (var key in dict1.Keys)
+        {
+            if (!dict2.TryGetValue(key, out tmp))
+                return false;
+            if (!test(dict1[key], tmp))
+                return false;
+        }
+        return true;
+    }
+    public static bool IsSubsetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
+        => dict1.IsSubsetOf(dict2, InternalTester<TKey>.Test);
+    public static bool IsSupersetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test)
+        => dict2.IsSubsetOf(dict1, test);
+    public static bool IsSupersetOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
+        => dict1.IsSupersetOf(dict2, InternalTester<TKey>.Test);
+    public static bool IsEquivalentOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2, Func<TValue, TValue, bool> test)
+        => dict1.IsSubsetOf(dict2, test) && dict1.IsSupersetOf(dict2, test);
+    public static bool IsEquivalentOf<TKey, TValue>(this IDictionary<TKey, TValue> dict1, IDictionary<TKey, TValue> dict2)
+        => dict1.IsEquivalentOf(dict2, InternalTester<TKey>.Test);
+
+    #endregion
+
+    #region short-hand
+
     public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key)
     {
         TValue value;
@@ -24,7 +70,7 @@ static class DictEx
     }
 
     public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> source,
-        TKey key, Selector<TKey, TValue> factory)
+        TKey key, Func<TKey, TValue> factory)
     {
         TValue value;
         if (source.TryGetValue(key, out value))
@@ -33,7 +79,7 @@ static class DictEx
         return factory(key);
     }
     public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> source,
-        TKey key, Selector<TValue> factory)
+        TKey key, Func<TValue> factory)
     {
         TValue value;
         if (source.TryGetValue(key, out value))
@@ -41,6 +87,10 @@ static class DictEx
 
         return factory();
     }
+
+    #endregion
+
+    #region for many
 
     public static bool TryGetFirst<TKey, TValue>(this IEnumerable<IDictionary<TKey, TValue>> dicts,
         TKey key, out TValue value)
@@ -78,7 +128,7 @@ static class DictEx
     => dicts.GetFirstOrDefault(key);
 
     public static TValue GetFirstOrDefault<TKey, TValue>(this IEnumerable<IDictionary<TKey, TValue>> dicts,
-        TKey key, Selector<TKey, TValue> factory)
+        TKey key, Func<TKey, TValue> factory)
     {
         TValue value;
         foreach (var dict in dicts)
@@ -89,12 +139,12 @@ static class DictEx
 
         return factory(key);
     }
-    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Selector<TKey, TValue> factory,
+    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Func<TKey, TValue> factory,
         params IDictionary<TKey, TValue>[] dicts)
     => dicts.GetFirstOrDefault(key, factory);
 
     public static TValue GetFirstOrDefault<TKey, TValue>(this IEnumerable<IDictionary<TKey, TValue>> dicts,
-        TKey key, Selector<TValue> factory)
+        TKey key, Func<TValue> factory)
     {
         TValue value;
         foreach (var dict in dicts)
@@ -105,7 +155,9 @@ static class DictEx
 
         return factory();
     }
-    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Selector<TValue> factory,
+    public static TValue GetFirstOrDefault<TKey, TValue>(TKey key, Func<TValue> factory,
         params IDictionary<TKey, TValue>[] dicts)
     => dicts.GetFirstOrDefault(key, factory);
+
+    #endregion
 }

@@ -91,7 +91,7 @@ public class EnumerableExTest
         Assert.False("1".SequenceEqual("12"));
         Assert.False("123".SequenceEqual("1b3"));
 
-        Selector<char, char, bool> test = null;
+        Func<char, char, bool> test = null;
 
         //Assert.True("".SequenceEqual("", test));
         Assert.True("1".SequenceEqual("1", test));
@@ -140,7 +140,7 @@ public class EnumerableExTest
     {
         Assert.True(new[] { "1a", "2b", "3c" }.SequenceEqual("123".ZipFull("abc", (a, b) => new string(new[] { a, b }))));
 
-        Selector<char, char, int> selector = null;
+        Func<char, char, int> selector = null;
         Assert.Throws<ArgumentNullException>(() => "".ZipFull("", selector).All());
         selector = (a, b) => (a * char.MaxValue + 1) + b;
         Assert.Throws<ArgumentNullException>(() => "".ZipFull(default(string), selector).All());

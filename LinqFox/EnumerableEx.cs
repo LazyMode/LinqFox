@@ -26,7 +26,7 @@ static partial class EnumerableEx
         }
         return true;
     }
-    public static bool All<T>(this IEnumerable<T> source, Selector<T, bool> test, bool errorToFalse)
+    public static bool All<T>(this IEnumerable<T> source, Func<T, bool> test, bool errorToFalse)
     {
         try
         {
@@ -60,7 +60,7 @@ static partial class EnumerableEx
         }
         return false;
     }
-    public static bool Any<T>(this IEnumerable<T> source, Selector<T, bool> test, bool errorToFalse)
+    public static bool Any<T>(this IEnumerable<T> source, Func<T, bool> test, bool errorToFalse)
     {
         try
         {
@@ -79,7 +79,7 @@ static partial class EnumerableEx
         return false;
     }
 
-    public static IEnumerable<TResult> ZipFull<T1st, T2nd, TResult>(this IEnumerable<T1st> src1st, IEnumerable<T2nd> src2nd, Selector<T1st, T2nd, TResult> selector)
+    public static IEnumerable<TResult> ZipFull<T1st, T2nd, TResult>(this IEnumerable<T1st> src1st, IEnumerable<T2nd> src2nd, Func<T1st, T2nd, TResult> selector)
     {
         if (src1st == null)
             throw new NullReferenceException();
@@ -109,7 +109,7 @@ static partial class EnumerableEx
             throw new InvalidOperationException();
     }
 
-    public static bool SequenceEqual<T>(this IEnumerable<T> src1st, IEnumerable<T> src2nd, Selector<T, T, bool> test)
+    public static bool SequenceEqual<T>(this IEnumerable<T> src1st, IEnumerable<T> src2nd, Func<T, T, bool> test)
     {
         if (src1st == null)
             throw new NullReferenceException();

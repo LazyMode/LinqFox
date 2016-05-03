@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>LinqX</id>
-    <version>0.1-abudefduf</version>
+    <version>0.2</version>
     <authors>OmniKits</authors>
     <projectUrl>https://github.com/OmniKits/LinqFox</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>
     <description>-</description>
     <dependencies>
-      <dependency id="LinqFox" version="[0.1-abudefduf]" />
+      <dependency id="LinqFox" version="[0.2]" />
     </dependencies>
   </metadata>
   <files />

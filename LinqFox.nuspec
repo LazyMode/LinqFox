@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>LinqFox</id>
-    <version>0.1-abudefduf</version>
+    <version>0.2</version>
     <authors>OmniKits</authors>
     <projectUrl>https://github.com/OmniKits/LinqFox</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
