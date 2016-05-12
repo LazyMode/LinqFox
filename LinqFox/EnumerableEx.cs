@@ -12,7 +12,7 @@ static partial class EnumerableEx
         return true;
     }
 
-    public static bool All<T>(this IEnumerable<T> source, bool errorToFalse)
+    public static bool All<T>(this IEnumerable<T> source, bool errorAsFalse)
     {
         try
         {
@@ -20,13 +20,13 @@ static partial class EnumerableEx
         }
         catch
         {
-            if (errorToFalse)
+            if (errorAsFalse)
                 return false;
             throw;
         }
         return true;
     }
-    public static bool All<T>(this IEnumerable<T> source, Func<T, bool> test, bool errorToFalse)
+    public static bool All<T>(this IEnumerable<T> source, Func<T, bool> test, bool errorAsFalse)
     {
         try
         {
@@ -38,14 +38,14 @@ static partial class EnumerableEx
         }
         catch
         {
-            if (errorToFalse)
+            if (errorAsFalse)
                 return false;
             throw;
         }
         return true;
     }
 
-    public static bool Any<T>(this IEnumerable<T> source, bool errorToFalse)
+    public static bool Any<T>(this IEnumerable<T> source, bool errorAsFalse)
     {
         try
         {
@@ -54,25 +54,33 @@ static partial class EnumerableEx
         }
         catch
         {
-            if (errorToFalse)
+            if (errorAsFalse)
                 return false;
             throw;
         }
         return false;
     }
-    public static bool Any<T>(this IEnumerable<T> source, Func<T, bool> test, bool errorToFalse)
+    public static bool Any<T>(this IEnumerable<T> source, Func<T, bool> test, bool errorAsFalse)
     {
         try
         {
             foreach (var item in source)
             {
-                if (test(item))
-                    return true;
+                try
+                {
+                    if (test(item))
+                        return true;
+                }
+                catch
+                {
+                    if (!errorAsFalse)
+                        throw;
+                }
             }
         }
         catch
         {
-            if (errorToFalse)
+            if (errorAsFalse)
                 return false;
             throw;
         }
@@ -139,6 +147,4 @@ static partial class EnumerableEx
         }
         return !enmtr2nd.MoveNext();
     }
-    public static bool SequenceEqual<T>(this IEnumerable<T> src1st, IEnumerable<T> src2nd, IEqualityComparer<T> comparer = null)
-        => src1st.SequenceEqual(src2nd, (comparer ?? EqualityComparer<T>.Default).Equals);
 }
